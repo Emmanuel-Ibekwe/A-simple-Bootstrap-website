@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Layout</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .header, .sidebar {
+            background-color: lightblue;
+        }
+        
+        .menu, .main-content, .sidebar  {
+            float: left;
+            
+
+        }
+
+        .menu {
+            width: 17.5%; /* The width is given as 18% instead of rounding 
+                        it up to 20% so as to accomodate for the margins*/
+            margin: 0;
+            padding: 4px;
+        }
+
+        .menu li {
+            list-style-type: none;
+            border-bottom: 1px solid #f1f1f1;
+            padding-bottom: 15px;
+        }
+
+        .main-content {
+            width:60%;
+            margin: 0.5rem;
+            padding: 0;
+        }
+
+        #main-content-img {
+           width: 100%;
+        }
+
+        .sidebar {
+            width: 20%;
+            margin-left: 0.5rem;
+        }
+
+        .footer {
+            clear: both;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        @media screen and (max-width: 992px) {
+            .main-content { width: 78%;} /* The width is given as 78% instead of rounding it up 
+                                            to 80% to accomodate for the margins*/
+            .sidebar {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .menu, .main-content, .sidebar {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body style="font-family: Verdana;">
+    <div class="header">
+        <h1>Cinque Terre</h1>
+        <p>Resize the browser window</p>
+    </div><!--header-->
+
+    
+        <ul class="menu">
+            <li><a>The Walk</a></li>
+            <li><a>Transport</a></li>
+            <li><a>History</a></li>
+            <li><a>Gallery</a></li>
+        </ul><!--menu-->
+    
+
+    <div class="main-content">
+        <h2>The Walk</h2>
+        <p>The walk from Monterosso to Riomaggiore will take you approximately two hours,
+             give or take an hour depending on the weather conditions</p>
+        <img id="main-content-img" src="../img/town_by_the_seaside.jpg" alt="A beautiful town by the sea-side.">
+    </div><!--main-content-->
+
+    <div class="sidebar">
+        <h2>What?</h2>
+        <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+
+        <h2>Where?</h2>
+        <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+
+        <h2>Price</h2>
+        <p>The Walk is free!</p>
+    </div><!--sidebar-->
+
+    <div class="footer">
+        <p><small>This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</small></p>
+    </div><!--footer-->
+</body>
+</html>
